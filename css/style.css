@@ -251,7 +251,7 @@ header {
 	width: 529px;
 	display: flex;
 	flex-direction: column;
-	justify-content: start;
+	justify-content: space-between;
 }
 
 .testimonial-card h3 {
@@ -342,7 +342,16 @@ footer .oab {
 	margin-bottom: 0px;
 	transition: color 0.2s;
 }
-
+.link{
+	color: var(--primary-color);
+	text-decoration: none;
+	/* border: 1px solid var(--primary-color);
+	padding: 4px 12px; */
+	font-size: 0.85rem;
+	border-radius: 4px;
+	transition: color 0.2s;
+	width: fit-content;
+}
 footer .copyright {
 	margin-top: 30px;
 	font-size: 0.8rem;
