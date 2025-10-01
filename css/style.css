@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css2?family=Baskervville:wght@400&family=Lato:wght@400;700&display=swap');
+/* --- Reset Básico e Estilos Globais --- */
+:root {
+	--primary-color: #6a2e35;
+	--secondary-color: #f5f5f5; /* Fundo cinza claro */
+	--dark-text: #000;
+	--light-text: #ffffff;
+	--light: #FEF5F0;
+	--gold: #E1C09F;
+	--bordo: #3E000D;
+	--whatsapp-green: #25D366;
+}
+
+.color-primary{
+	color: var(--primary-color);
+}
+
+.color-secondary{
+	color: var(--secondary-color);
+}
+
+.color-dark{
+	color: var(--dark-text);
+}
+
+.color-light{
+	color: var(--light-text);
+}
+
+.color-gold{
+	color: var(--gold);
+}
+
+.color-bordo{
+	color: var(--bordo);
+}
+
+.bg-primary{
+	background-color: var(--primary-color);
+}
+
+.bg-secondary{
+	background-color: var(--secondary-color);
+}
+
+.text-center{
+	text-align: center;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: 'Lato', sans-serif;
+	font-size: 18px;
+	line-height: 1.5;
+	background-color: var(--light-text);
+	color: var(--dark-text);
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Baskervville', serif;
+	font-weight: 400;
+	line-height: 1.3;
+}
+
+p{
+	line-height: 200%;
+	margin-bottom: 1.5rem;
+}
+
+/* --- Container Principal --- */
+.container {
+	max-width: 620px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 80px 24px;
+	overflow-x: hidden;
+}
+.fluid{
+	width: 100%;
+	max-width: 100% !important;
+}
+
+.padding-top-0{
+	padding-top: 0 !important;
+}
+
+.padding-bottom-0{
+	padding-bottom: 0 !important;
+}
+
+/* --- Cabeçalho e Seção Hero --- */
+header {
+	background-color: var(--primary-color);
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1.5rem;
+	.logo{
+		max-width: 220px;
+		height: auto;
+	}
+	h1{
+		margin: 2rem 0;
+		color: var(--light-text);
+		font-size: 2.5rem;
+		letter-spacing: 1px;
+		margin-bottom: 5px;
+	}
+	p {
+		color: var(--gold);
+		margin: 2rem 0;
+	}
+}
+
+.section-title{
+	font-size: 2.4rem;
+	line-height: 150%;
+	margin-bottom: 2.4rem;
+}
+
+.marker::after{
+	content: '';
+	background-color: var(--primary-color);
+	height: 2px;
+	width: 100px;
+	margin: 1rem auto;
+	display: block;
+}
+
+/* --- Botão do WhatsApp (Componente Reutilizável) --- */
+.whatsapp-button {
+	margin-top: 2rem;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--gold);
+	color: var(--bordo);
+	padding: 15px 30px;
+	border-radius: 4px;
+	text-decoration: none;
+	font-weight: 700;
+	transition: transform 0.2s, box-shadow 0.2s;
+	box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+	svg{
+		fill: var(--bordo)
+	}
+	
+}
+
+
+.whatsapp-button.inverse{
+	background-color: var(--bordo);
+	color: var(--gold);
+	svg{
+		fill: var(--gold);
+	}
+}
+
+.whatsapp-button:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.whatsapp-button svg {
+		width: 24px;
+		height: 24px;
+		margin-right: 10px;
+}
+
+#first-pic {
+	display: block;
+	margin: 0 auto;
+	width: 100%;
+	min-height: 480px;
+	height: 100vh;
+	background-image: url('../images/dra-denise-bressan-advogada.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top center;
+}
+
+#second-pic {
+	display: block;
+	margin: 0 auto;
+	width: 100%;
+	min-height: 480px;
+	height: 100vh;
+	background-image: url('../images/denise-bressan-advogada.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top center;
+}
+
+
+
+/* --- Seção Sobre --- */
+#sobre {
+	text-align: center;
+	color: var(--light-text)
+}
+
+#atuacao{
+	background-color: var(--light);
+}
+.areas-grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 24px;
+}
+
+.area-card {
+	padding: 1.5rem 0;
+	h3{
+		font-size: 1.75rem;
+		margin-bottom: 1.75rem;
+		color: var(--primary-color);
+	}
+}
+
+.area-card::after{
+	content: '';
+	background-color: var(--primary-color);
+	height: 2px;
+	width: 60px;
+	margin: 3rem auto 0rem;
+	display: block;
+}
+
+/* --- Seção Clientes Satisfeitos --- */
+#clientes {
+	text-align: center;	
+}
+
+.testimonial-card {
+	background-color: var(--light-text);
+	padding: 24px;
+	border-radius: 8px;
+	box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+	text-align: left;
+	height: auto;
+	width: 529px;
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+}
+
+.testimonial-card h3 {
+	font-size: 1.2rem;
+	margin-bottom: 5px;
+}
+
+.stars {
+	color: #ffc107;
+	margin-bottom: 15px;
+	font-size: 1.5rem;
+}
+
+.customer{
+	font-weight: 700;
+	font-size: 1.25rem;
+}
+
+/* --- Seção de Perguntas Frequentes (FAQ) --- */
+.faq-item {
+	border-bottom: 1px solid #e0e0e0;
+	padding: 15px 0;
+}
+
+.faq-item:last-child {
+	border-bottom: none;
+}
+
+.faq-item summary {
+	font-weight: 700;
+	color: var(--primary-color);
+	cursor: pointer;
+	list-style: none; /* Remove a seta padrão */
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.faq-item summary::-webkit-details-marker {
+	display: none; /* Remove a seta padrão no Chrome/Safari */
+}
+
+.faq-item summary::after {
+	border-style: solid;
+	border-width: 0.125em 0.125em 0 0;
+	content: '';
+	display: inline-block;
+	height: 0.45em;
+	left: 0.15em;
+	position: relative;
+	top: 0.15em;
+	transform: rotate(135deg);
+	vertical-align: top;
+	width: 0.45em;
+	transition: transform 0.2s;
+}
+
+.faq-item[open] summary::after {
+	transform: rotate(-45deg);
+}
+
+.faq-answer {
+	padding-top: 15px;
+	color: #333;
+	text-align: left;
+}
+
+/* --- Rodapé --- */
+footer {
+	background-color: var(--primary-color);
+	color: var(--gold);
+	text-align: center;
+	.logo-footer{
+		max-width: 180px;
+		height: auto;
+	
+	}
+}
+
+footer .oab {
+	font-size: 1.250rem;
+	margin: 2rem auto;
+}
+.contact-info a {
+	color: var(--gold);
+	text-decoration: none;
+	display: block;
+	margin-bottom: 0px;
+	transition: color 0.2s;
+}
+
+footer .copyright {
+	margin-top: 30px;
+	font-size: 0.8rem;
+}
+
+.glider .testimonial-card {
+  margin: 0 15px;
+}
+.tablist{
+	padding: 24px;
+}
+.glider-dots{
+	margin: 2rem auto;
+}
+
+.glider-dot{
+	width: 6px;
+	height: 6px;
+	background-color: var(--light-text);
+	opacity: 0.5;
+	transition: all 0.2s ease-in-out;
+}
+.glider-dot .active{
+	opacity: 1;
+}
