@@ -2,7 +2,8 @@
 /* --- Reset Básico e Estilos Globais --- */
 :root {
 	--primary-color: #541C27;
-	--secondary-color: #f5f5f5; /* Fundo cinza claro */
+	/* --primary-color: #3E000C; */
+	--secondary-color: #f5f5f5;
 	--dark-text: #000;
 	--light-text: #ffffff;
 	--light: #E8DDCF;
@@ -72,7 +73,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p{
-	line-height: 200%;
+	line-height: 175%;
 	margin-bottom: 1.5rem;
 }
 
@@ -112,7 +113,7 @@ header {
 	h1{
 		margin: 2rem 0;
 		color: var(--light-text);
-		font-size: 2.5rem;
+		font-size: 2.725rem;
 		letter-spacing: 1px;
 		margin-bottom: 5px;
 	}
@@ -149,6 +150,7 @@ header {
 	border-radius: 4px;
 	text-decoration: none;
 	font-weight: 700;
+	font-size: 1.25rem;
 	transition: transform 0.2s, box-shadow 0.2s;
 	box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 	svg{
